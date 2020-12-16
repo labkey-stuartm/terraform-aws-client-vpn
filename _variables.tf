@@ -23,6 +23,13 @@ variable "tags" {
 }
 
 variable "logs_retention" {
+  type        = number
   default     = 365
   description = "Retention in days for CloudWatch Log Group"
+}
+
+variable "split_tunnel"
+  type        = bool
+  default     = false
+  description = "Indicates whether split-tunnel is enabled on VPN endpoint"
 }
