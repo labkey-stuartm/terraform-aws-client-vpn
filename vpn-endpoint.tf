@@ -24,4 +24,9 @@ resource "aws_ec2_client_vpn_network_association" "default" {
   subnet_id              = element(var.subnet_ids, count.index)
 }
 
-
+resource "aws_ec2_client_vpn_authorization_rule" "default" {
+  client_vpn_endpoint_id = aws_ec2_client_vpn_endpoint.default.id
+  target_network_cidr    = "0.0.0.0/0"
+  authorize_all_groups   = true
+  description            = var.name
+}
