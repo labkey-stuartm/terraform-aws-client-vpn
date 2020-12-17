@@ -2,13 +2,7 @@ resource "aws_cloudwatch_log_group" "vpn" {
   name              = "/aws/vpn/${var.name}/logs"
   retention_in_days = var.logs_retention
 
-  tags = merge(
-    var.tags,
-    map(
-      "Name", "${var.name}-Client-VPN-Log-Group",
-      "EnvName", var.name
-    )
-  )
+  tags = var.tags
 }
 
 resource "aws_cloudwatch_log_stream" "vpn" {
