@@ -20,7 +20,7 @@ resource "tls_self_signed_cert" "ca" {
   ]
 }
 
-resource "aws_acm_certificate" "ca" {
-  private_key      = tls_private_key.ca.private_key_pem
-  certificate_body = tls_self_signed_cert.ca.cert_pem
-}
+#resource "aws_acm_certificate" "ca" {
+#  private_key      = tls_private_key.ca.private_key_pem
+#  certificate_body = tls_self_signed_cert.ca.cert_pem
+#}
