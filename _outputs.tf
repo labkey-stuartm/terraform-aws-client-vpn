@@ -15,7 +15,7 @@ output "ca" {
 }
 
 output "ca_key" {
-  value       = "tls_private_key.ca.private_key_pem"
+  value       = tls_private_key.ca.private_key_pem
   sensitive   = true
   description = "ca private key"
 }
