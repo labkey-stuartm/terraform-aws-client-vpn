@@ -3,8 +3,8 @@ output "endpoint_dns" {
   description = "Used for .ovpn templating"
 }
 
-output "endpoint_arn" {
-  value       = aws_ec2_client_vpn_endpoint.default.arn
+output "endpoint_id" {
+  value       = aws_ec2_client_vpn_endpoint.default.id
   description = "arn of the vpn endpoint"
 }
 
