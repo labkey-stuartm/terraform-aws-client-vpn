@@ -1,9 +1,7 @@
 name: Generate terraform docs
 
 on:
-  push:
-    branches:
-      - master
+  - pull_request
 
 jobs:
   docs:
@@ -14,7 +12,7 @@ jobs:
         ref: master
 
     - name: Render terraform docs inside the README.md and push changes back to pushed branch
-      uses: DNXLabs/terraform-docs@v1.0.0
+      uses: terraform-docs/gh-actions@v0.6.1
       with:
         tf_docs_working_dir: .
         tf_docs_output_file: README.md

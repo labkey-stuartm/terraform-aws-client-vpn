@@ -51,9 +51,9 @@ The following resources will be created:
 
 <!--- END_TF_DOCS --->
 
-## Author
+## Authors
 
-Module managed by [DNX Solutions](https://github.com/DNXLabs).
+Module based on fork of [DNX Solutions](https://github.com/DNXLabs).
 
 ## License
 Apache 2 Licensed. See [LICENSE](https://github.com/DNXLabs/terraform-aws-client-vpn/blob/master/LICENSE) for full details.
