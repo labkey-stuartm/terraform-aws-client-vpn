@@ -33,3 +33,9 @@ variable "split_tunnel" {
   default     = false
   description = "Indicates whether split-tunnel is enabled on VPN endpoint"
 }
+
+variable "dns_servers" {
+  type        = list(string)
+  default     = ["", ""]
+  description = "list of dns servers to use"
+}
