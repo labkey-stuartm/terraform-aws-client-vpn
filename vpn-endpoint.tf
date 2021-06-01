@@ -24,6 +24,7 @@ resource "aws_ec2_client_vpn_network_association" "default" {
   #count                  = length(var.subnet_ids)
   client_vpn_endpoint_id = aws_ec2_client_vpn_endpoint.default.id
   subnet_id              = element(var.subnet_ids, 0)
+  security_groups        = var.vpn_client_sgs
 }
 
 resource "aws_ec2_client_vpn_authorization_rule" "default" {

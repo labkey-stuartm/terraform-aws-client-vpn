@@ -39,3 +39,9 @@ variable "dns_servers" {
   default     = ["", ""]
   description = "list of dns servers to use"
 }
+
+variable "vpn_client_sgs" {
+  type        = list(string)
+  default     = [""]
+  description = "security group to associate with client vpn - allows or denys traffic"
+}
