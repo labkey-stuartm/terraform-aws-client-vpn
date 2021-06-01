@@ -37,6 +37,7 @@ The following resources will be created:
 | split\_tunnel | Indicates whether split-tunnel is enabled on VPN endpoint | `bool` | `false` | no |
 | subnet\_ids | Subnet ID to associate clients | `list(string)` | n/a | yes |
 | tags | Extra tags to attach to resources | `map(string)` | `{}` | no |
+| vpn\_client\_sgs | security group to associate with client vpn - allows or denys traffic | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
 
 ## Outputs
 
@@ -44,8 +45,8 @@ The following resources will be created:
 |------|-------------|
 | ca | Used for .ovpn templating |
 | ca\_key | ca private key |
-| endpoint\_arn | arn of the vpn endpoint |
 | endpoint\_dns | Used for .ovpn templating |
+| endpoint\_id | arn of the vpn endpoint |
 | root\_cert | Used for .ovpn templating |
 | root\_key | Used for .ovpn templating |
 
